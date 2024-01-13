@@ -1,0 +1,27 @@
+package com.shiviraj.iot.mqtt.model
+
+import java.time.LocalDateTime
+import java.time.ZoneId
+
+data class AuditMessage(
+    val status: AuditStatus,
+    val userId: String,
+    val metadata: Map<String, Any>,
+    val event: AuditEvent,
+    val accountId: String? = null,
+    val deviceId: String? = null,
+    val timestamp: LocalDateTime = LocalDateTime.now(ZoneId.of("UTC"))
+) : Message()
+
+enum class AuditStatus {
+    SUCCESS,
+    FAILURE
+}
+
+enum class AuditEvent {
+    SIGN_UP,
+    LOGIN,
+    GENERATE_OTP,
+    VERIFY_OTP,
+    RESET_PASSWORD
+}
