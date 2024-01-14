@@ -20,7 +20,9 @@ enum class AuditStatus {
 
 enum class AuditEvent {
     SIGN_UP,
+    VERIFY_PASSWORD,
     LOGIN,
+    GENERATE_TOKEN,
     GENERATE_OTP,
     VERIFY_OTP,
     RESET_PASSWORD
