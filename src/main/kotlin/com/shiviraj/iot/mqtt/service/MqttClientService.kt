@@ -31,7 +31,6 @@ class MqttClientService(private val mqttConfig: MqttConfig) {
             logger.info(LogDetails(message = "Failed to connect with mqtt"))
         }
 
-
         return mqttClient
     }
 }

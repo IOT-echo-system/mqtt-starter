@@ -22,5 +22,3 @@ class MqttSubscriber(private val mqttClientService: MqttClientService) {
         logger.info(LogDetails(message = "Successfully subscribed topic with $topicName"))
     }
 }
-
-
