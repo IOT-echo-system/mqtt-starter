@@ -25,5 +25,6 @@ enum class AuditEvent {
     GENERATE_TOKEN,
     GENERATE_OTP,
     VERIFY_OTP,
-    RESET_PASSWORD
+    RESET_PASSWORD,
+    SEND_EMAIL
 }
