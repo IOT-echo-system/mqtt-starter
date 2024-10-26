@@ -1,14 +1,15 @@
-package com.shiviraj.iot.mqtt.service
+package com.robotutor.iot.services
 
-import com.shiviraj.iot.loggingstarter.details.LogDetails
-import com.shiviraj.iot.loggingstarter.logger.Logger
-import com.shiviraj.iot.mqtt.config.MqttConfig
+import com.robotutor.iot.config.MqttConfig
+import com.robotutor.loggingstarter.LogDetails
+import com.robotutor.loggingstarter.Logger
 import org.eclipse.paho.client.mqttv3.MqttClient
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions
 import org.springframework.stereotype.Service
 
 @Service
 class MqttClientService(private val mqttConfig: MqttConfig) {
+
     private val mqttClient = MqttClient(mqttConfig.broker, mqttConfig.clientId)
     val logger = Logger(this::class.java)
     fun connect(): MqttClient {

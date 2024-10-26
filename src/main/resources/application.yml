@@ -1,0 +1,6 @@
+app:
+  mqtt:
+    broker: ${MQTT_BROKER}
+    username: ${MQTT_USERNAME}
+    clientId: ${spring.application.name}
+    password: ${MQTT_PASSWORD}

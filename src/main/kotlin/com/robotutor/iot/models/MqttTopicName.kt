@@ -1,4 +1,4 @@
-package com.shiviraj.iot.mqtt.model
+package com.robotutor.iot.models
 
 enum class MqttTopicName {
     AUDIT,

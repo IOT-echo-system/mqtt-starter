@@ -1,10 +1,10 @@
-package com.shiviraj.iot.mqtt.service
+package com.robotutor.iot.services
 
-import com.shiviraj.iot.loggingstarter.details.LogDetails
-import com.shiviraj.iot.loggingstarter.logger.Logger
-import com.shiviraj.iot.loggingstarter.serializer.DefaultSerializer
-import com.shiviraj.iot.mqtt.model.Message
-import com.shiviraj.iot.mqtt.model.MqttTopicName
+import com.robotutor.iot.models.Message
+import com.robotutor.iot.models.MqttTopicName
+import com.robotutor.loggingstarter.LogDetails
+import com.robotutor.loggingstarter.Logger
+import com.robotutor.loggingstarter.serializer.DefaultSerializer
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,4 +1,4 @@
-package com.shiviraj.iot.mqtt.config
+package com.robotutor.iot.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
