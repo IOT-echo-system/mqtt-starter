@@ -33,7 +33,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/IOT-echo-system/logging-starter")
+            url = uri("https://maven.pkg.github.com/IOT-echo-system/mqtt-starter")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.token") as String? ?: System.getenv("TOKEN")
