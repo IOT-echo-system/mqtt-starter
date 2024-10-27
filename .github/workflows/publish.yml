@@ -27,7 +27,7 @@ jobs:
           TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Publish to GitHub Packages
-        run: ./gradlew publish
+        run: ./gradlew clean publish
         env:
           USERNAME: ${{ secrets.ACTOR }}
           TOKEN: ${{ secrets.PAT_TOKEN }}
