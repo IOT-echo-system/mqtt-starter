@@ -1,4 +1,3 @@
-
 plugins {
     id("org.springframework.boot") version "3.2.0"
     id("io.spring.dependency-management") version "1.1.4"
@@ -7,12 +6,12 @@ plugins {
     `maven-publish`
 }
 
-group = "com.shiviraj.iot"
-version = "0.0.1"
-
 java {
     sourceCompatibility = JavaVersion.VERSION_21
 }
+
+group = "com.robotutor.iot"
+version = "0.0.1"
 
 publishing {
     publications {
@@ -20,11 +19,11 @@ publishing {
             from(components["java"])
             groupId = "com.robotutor"
             artifactId = "mqtt-starter"
-            version = "1.0.1"
+            version = "1.0.0"
 
             pom {
-                name.set("Reactive Logging Starter")
-                description.set("A reactive logging starter package")
+                name.set("MQTT Starter")
+                description.set("A reactive mqtt starter package")
                 url.set("https://maven.pkg.github.com/IOT-echo-system/mqtt-starter")
             }
         }
@@ -61,15 +60,14 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.9")
     implementation("org.springframework.integration:spring-integration-mqtt:6.0.0")
     implementation("com.robotutor:robotutor-tech-utils:1.0.0")
-    implementation("com.robotutor:logging-starter:1.0.2")
+    implementation("com.robotutor:logging-starter:1.0.0")
 }
 
 kotlin {
     compilerOptions {
-        freeCompilerArgs.addAll("-Xjsr305=strict", "-Xdebug")
+        freeCompilerArgs.addAll("-Xjsr305=strict")
     }
 }
-
 
 tasks.withType<Test> {
     useJUnitPlatform()
