@@ -19,7 +19,7 @@ publishing {
             from(components["java"])
             groupId = "com.robotutor"
             artifactId = "mqtt-starter"
-            version = "1.0.1"
+            version = "1.0.2"
 
             pom {
                 name.set("MQTT Starter")
