@@ -19,7 +19,7 @@ publishing {
             from(components["java"])
             groupId = "com.robotutor"
             artifactId = "mqtt-starter"
-            version = "1.0.0"
+            version = "1.0.1"
 
             pom {
                 name.set("MQTT Starter")
@@ -44,13 +44,19 @@ publishing {
 
 repositories {
     mavenCentral()
-    maven {
-        url = uri("https://maven.pkg.github.com/IOT-echo-system/mqtt-starter")
-        credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-            password = project.findProperty("gpr.token") as String? ?: System.getenv("TOKEN")
+    fun githubMavenRepository(name: String) {
+        maven {
+            url = uri("https://maven.pkg.github.com/IOT-echo-system/$name")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.token") as String? ?: System.getenv("TOKEN")
+            }
         }
     }
+
+    githubMavenRepository("robotutor-tech-utils")
+    githubMavenRepository("web-client-starter")
+    githubMavenRepository("logging-starter")
 }
 
 dependencies {
@@ -59,7 +65,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("com.google.code.gson:gson:2.8.9")
     implementation("org.springframework.integration:spring-integration-mqtt:6.0.0")
-    implementation("com.robotutor:robotutor-tech-utils:1.0.0")
+    implementation("com.robotutor:robotutor-tech-utils:1.0.3")
     implementation("com.robotutor:logging-starter:1.0.0")
 }
 
